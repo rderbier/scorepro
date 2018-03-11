@@ -10,8 +10,8 @@ var index = require('./routes/index');
 var api = require('./routes/api');
 
 var app = express();
-
-mongoose.connect('mongodb://localhost/schavapp');
+mongo_uri = process.env.MONGODB_URI || 'mongodb://localhost/schavapp';
+mongoose.connect(mongo_uri);
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
