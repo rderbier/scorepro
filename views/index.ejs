@@ -10,21 +10,21 @@
 	<div class="container centerbox">
 
 		<h1> Welcome </h1>
-		<form  action="/newevent/" method="post">
+		<form  action="/event-edit" method="post">
 			<div class="form-group">
 				<!--label for="code">Enter your event code </label-->
 				<input type="text" class="form-control" id="code" aria-describedby="codeHelp" placeholder="Enter the event code">
-				<small id="codeHelp" class="form-text text-muted">You should have received the code ...</small>
+				<small id="codeHelp" class="form-text text-muted" name="code">You should have received the code ...</small>
 			</div>
-			
-			<button type="submit" class="btn btn-primary">Access event</button>
+
+			<button type="submit" class="btn btn-primary">Edit event</button>
 		</form>
-		
+
 		<h2 class="division"><span>or</span></h2>
-		
+
 		<button type="submit" class="btn btn-primary" onclick="window.location.href='/newevent'">Create a new event</button>
 
-		
+
 	</div>
 	<footer>
 		<% include ./partials/footer %>
